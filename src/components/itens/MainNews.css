@@ -1,0 +1,36 @@
+.mainNews{
+    flex-grow: 1;
+    margin: 10px;
+}
+
+.mainNews small {
+    font-weight: 600;
+    margin: 0px 5px;
+}
+
+.mainNews svg {
+    width: 20px;
+}
+
+.mainNews > img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.mainNews small, .mainNews svg{
+    color: gray;
+    cursor: pointer;
+}
+
+/* .mainNews > h3 {
+    font-size: 1.5rem;
+    margin: 0px;
+    cursor: pointer;
+} */
+
+/*Responsividade*/
+@media(max-width:1264px){
+    .mainNews > h3 {
+        font-size: 1.2rem;
+    }
+}
