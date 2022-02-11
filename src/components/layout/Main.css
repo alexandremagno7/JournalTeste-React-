@@ -1,18 +1,10 @@
 :root{
     --contentArea: 0px 10%;
+    --borderColumn: 4px solid white;
 }
 
 .mainNewsArea{
     display: flex;
-    padding: var(--contentArea);
-    margin: 10px 0px;
-}
-
-.secondaryNewsArea,.secondaryNewsArea div{
-    display: flex;
-}
-
-.secondaryNewsArea{
     padding: var(--contentArea);
     margin: 10px 0px;
 }
@@ -22,14 +14,6 @@ h3 {
     cursor: pointer;
 }
 
-.mainNewsArea h3 {
-    font-size: 1.5rem;
-}
-
-.secondaryNewsArea h3 {
-    font-size: 1.2rem;
-}
-
 .columnists{
     background-color: cornflowerblue;
     padding: 10px 10%;
@@ -37,28 +21,47 @@ h3 {
     font-family:'Times New Roman', Times, serif;
 }
 
+.columnists h4{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.areaDeApresentacaoColum{
+    display: flex;
+    justify-content: space-between;
+    
+    padding: 10px 0px;
+    border-top: var(--borderColumn);
+    border-bottom: var(--borderColumn);
+}
+
+.otherNewsArea{
+    padding: var(--contentArea);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 30px 0px;
+}
+
 /*Responsividade*/
 @media(max-width:1150px){
-    .mainNewsArea,.secondaryNewsArea{
+    .mainNewsArea{
         flex-wrap: wrap;
     }
 
-    .mainNewsArea h3 {
-        font-size: 1.2rem;
+    .otherNewsArea{
+        grid-template-columns: repeat(2,1fr);
     }
-    
-    .secondaryNewsArea h3 {
-        font-size: 0.9rem;
+}
+
+@media (max-width:1200px){
+    .areaDeApresentacaoColum{
+        overflow-x: scroll;
     }
 }
 
 @media(max-width:650px){
-    .secondaryNewsArea div{
-        flex-wrap: wrap;
-    }
-
-    /*A fonte volta para 1.2rem porque fica um tamanho adequado para o tamanho da tela*/
-    .secondaryNewsArea h3 {
-        font-size: 1.2rem;
+    .otherNewsArea{
+        grid-template-columns: repeat(1,1fr);
     }
 }

@@ -7,3 +7,9 @@
 
     flex-wrap: wrap;
 }
+
+@media (max-width: 600px){
+    .navMiddle{
+        display: none;
+    }
+}
