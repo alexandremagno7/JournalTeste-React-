@@ -17,11 +17,12 @@ export default function(props){
 
     return <article title={props.titulo} className="TheNews">
                 <div style={{display: 'flex', alignItems: 'center'}} title={props.tipo}>
-                   {IconeTipo(props.tipo)} <small>{props.tipo}</small> | <Icone.Compartilhar/>
+                   {IconeTipo(props.tipo)} <small>{props.tipo}</small> | <span title="Compartilhar"><Icone.Compartilhar/></span>
                 </div>
                 <a href="#">
                     <img src={props.imagem} alt={"Imagem da matéria: " + props.titulo} />
                     <h3 className={props.principal === true ? "bigger" : "smaller"}>{props.titulo}</h3>
+                    {/* Caso a notícia seja principal, ela recebe um tratamento diferenciado nos estilos */}
                 </a>
             </article>
 }

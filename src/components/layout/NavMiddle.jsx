@@ -3,6 +3,7 @@ import './NavMiddle.css'
 
 import NavMiddleButton from '../itens/NavMiddleButton'
 
+{/* Desaparece no formato mobile */}
 export default function(){
     return <nav className="navMiddle">
         <NavMiddleButton titulo="Opinião"/>

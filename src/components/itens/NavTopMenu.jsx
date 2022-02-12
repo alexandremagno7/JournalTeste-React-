@@ -2,6 +2,7 @@ import React from "react";
 import './NavTopButton.css'
 
 export default function(props){
+    {/* Só é exibido no formato mobile */}
     return <li>
                 <a href="">
                 <button className="but mobi" title={props.titulo}>

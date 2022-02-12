@@ -4,6 +4,7 @@ import './NavMiddleMenu.css'
 import NavMiddleButton from "./NavMiddleButton";
 
 export default function () {
+    {/* Só é exibido no formato mobile */}
     return <details>
         <summary> Ver mais </summary>
         <nav className="navMiddleHidden">

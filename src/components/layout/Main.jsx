@@ -26,17 +26,16 @@ import Col5 from '../../imgs/Col5.jpg'
 
 export default function(){
     return <main>
-        {/*Área de notícias mais importantes. (No max. duas notícias)*/}
+        {/*Área de notícias mais importantes (No max. duas notícias). Deve, obrigatoriamente, receber o atributo 'principal' como true*/}
         <section className="mainNewsArea">
             <TheNews tipo="Mundo" imagem={Img14} principal={true} titulo="Mulher volta com ex-marido 'blipado' e atual reclama: 'Avengers filhos da...' "/>
             <TheNews tipo="Política" imagem={Img5} principal={true} titulo="Guerrilheiros ocupam vilarejo no México. O dono e um professor são assassinados"/>
         </section>
 
-        {/*Notícias secundárias */}
         <section className="otherNewsArea">
-            {/*Area de notícias secundárias 1. (No max. 4 notícias) */}
+            {/*Area de notícias secundárias/comuns 1 (No max. 4 notícias). Deve, obrigatoriamente, receber o atributo 'principal' como false  */}
                 <TheNews tipo="Esporte" imagem={Img2} principal={false} titulo="Covid: Jogos do Bota-Fogo retornam em razão do baixo risco de aglomeração"/>
-                <TheNews tipo="Economia" imagem={Img12} principal={false} titulo="Indagado sobre ser PM no Rio de Janeiro, Rambo responde: 'Tá doido?'"/>
+                <TheNews tipo="Economia" imagem={Img12} principal={false} titulo="Indagado sobre ser PM no Rio de Janeiro, Rambo responde: 'Tenho medo!'"/>
                 <TheNews tipo="Ciência" imagem={Img8} principal={false} titulo="Cientistas fazem descoberta revolucionária e confirmam: Minhocas não têm sovaco"/>
                 <TheNews tipo="Opinião" imagem={Img7} principal={false} titulo="Fé na humanidade: Moradores do município de Porciúncula criam máscaras comunitárias"/>
         </section>
@@ -47,15 +46,14 @@ export default function(){
                 <div className="areaDeApresentacaoColum">
                     <Columnist nome="Fausto Fanti" foto={Col1}/>
                     <Columnist nome="Bruno Sutter" foto={Col2}/>
-                    <Columnist nome="Gil Brother Away" foto={Col3}/>
+                    <Columnist nome="Gil Brother" foto={Col3}/>
                     <Columnist nome="Felipe Fagundes" foto={Col4}/>
                     <Columnist nome="Adriano Pereira" foto={Col5}/>
                 </div>
         </nav>
 
-        {/*Notícias secundárias */}
         <section className="otherNewsArea">
-            {/*Area de notícias secundárias 1. (Num. de notícias indeterminado) */}
+            {/*Area de notícias secundárias/comuns 2 (Num. de notícias indeterminado). Deve, obrigatoriamente, receber o atributo 'principal' como false */}
                 <TheNews tipo="Economia" imagem={Img11} principal={false} titulo="Rubens Barrichello parabenizou ontem Dicaprio pelo prêmio Oscar"/>
                 <TheNews tipo="Política" imagem={Img1} principal={false} titulo="Seu Creisson diz que cogita disputar a Presidência da República"/>
                 <TheNews tipo="Economia" imagem={Img10} principal={false} titulo="Falso abatedouro em São Gonçalo-RJ vendia pombo como se fosse galeto"/>
